@@ -41,7 +41,6 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 
 	private DateFormatter dateFormatter;
 
-
 	/**
 	 * Set the date formatter to register. If not specified no formatter is registered.
 	 * This method can be used if global formatter configuration is required.
@@ -51,7 +50,6 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 		Assert.notNull(dateFormatter, "DateFormatter must not be null");
 		this.dateFormatter = dateFormatter;
 	}
-
 
 	@Override
 	public void registerFormatters(FormatterRegistry registry) {
@@ -88,7 +86,6 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 		}
 	}
 
-
 	private static class DateToCalendarConverter implements Converter<Date, Calendar> {
 
 		@Override
@@ -99,7 +96,6 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 		}
 	}
 
-
 	private static class CalendarToDateConverter implements Converter<Calendar, Date> {
 
 		@Override
@@ -107,7 +103,6 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 			return source.getTime();
 		}
 	}
-
 
 	private static class CalendarToLongConverter implements Converter<Calendar, Long> {
 
@@ -117,7 +112,6 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 		}
 	}
 
-
 	private static class LongToDateConverter implements Converter<Long, Date> {
 
 		@Override
@@ -125,7 +119,6 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 			return new Date(source);
 		}
 	}
-
 
 	private static class LongToCalendarConverter implements Converter<Long, Calendar> {
 
@@ -136,5 +129,4 @@ public class DateFormatterRegistrar implements FormatterRegistrar {
 			return calendar;
 		}
 	}
-
 }

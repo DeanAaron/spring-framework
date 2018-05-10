@@ -53,7 +53,6 @@ public class DateFormatter implements Formatter<Date> {
 		ISO_PATTERNS = Collections.unmodifiableMap(formats);
 	}
 
-
 	private String pattern;
 
 	private int style = DateFormat.DEFAULT;
@@ -65,7 +64,6 @@ public class DateFormatter implements Formatter<Date> {
 	private TimeZone timeZone;
 
 	private boolean lenient = false;
-
 
 	/**
 	 * Create a new default DateFormatter.
@@ -79,7 +77,6 @@ public class DateFormatter implements Formatter<Date> {
 	public DateFormatter(String pattern) {
 		this.pattern = pattern;
 	}
-
 
 	/**
 	 * Set the pattern to use to format date values.
@@ -145,7 +142,6 @@ public class DateFormatter implements Formatter<Date> {
 		this.lenient = lenient;
 	}
 
-
 	@Override
 	public String print(Date date, Locale locale) {
 		return getDateFormat(locale).format(date);
@@ -155,7 +151,6 @@ public class DateFormatter implements Formatter<Date> {
 	public Date parse(String text, Locale locale) throws ParseException {
 		return getDateFormat(locale).parse(text);
 	}
-
 
 	protected DateFormat getDateFormat(Locale locale) {
 		DateFormat dateFormat = createDateFormat(locale);
@@ -209,5 +204,4 @@ public class DateFormatter implements Formatter<Date> {
 		}
 		throw new IllegalStateException("Unsupported style pattern '" + this.stylePattern + "'");
 	}
-
 }

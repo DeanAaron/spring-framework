@@ -51,7 +51,6 @@ public class ConcurrentMapCache implements Cache {
 
 	private final boolean allowNullValues;
 
-
 	/**
 	 * Create a new ConcurrentMapCache with the specified name.
 	 * @param name the name of the cache
@@ -84,7 +83,6 @@ public class ConcurrentMapCache implements Cache {
 		this.store = store;
 		this.allowNullValues = allowNullValues;
 	}
-
 
 	@Override
 	public final String getName() {
@@ -162,5 +160,4 @@ public class ConcurrentMapCache implements Cache {
 	@SuppressWarnings("serial")
 	private static class NullHolder implements Serializable {
 	}
-
 }
